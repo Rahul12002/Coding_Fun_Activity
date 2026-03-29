@@ -38,9 +38,7 @@
       <div class="btn">
         <a href="yes.html">Yes</a>
         <a href="no1.html">No</a>
-        <button onclick="document.getElementById('bg-music').play()">
-          Play Our Song 🎵
-        </button>
+        <button onclick="playSongAndShowModal()">Play Our Song 🎵</button>
       </div>
       <div style="margin-top: 20px">
         <a href="reasons.html" style="color: #fff; text-decoration: underline"
@@ -70,12 +68,11 @@
       }
       setInterval(updateCountdown, 1000);
       updateCountdown();
-      // Surprise modal
-      setTimeout(
-        () =>
-          showModal("Surprise! I love you more than anything in the world 💕"),
-        5000,
-      );
+      // Function to play song and show modal
+      function playSongAndShowModal() {
+        document.getElementById("bg-music").play();
+        showModal("Surprise! I love you more than anything in the world 💕");
+      }
     </script>
     <script src="./script.js"></script>
   </body>
