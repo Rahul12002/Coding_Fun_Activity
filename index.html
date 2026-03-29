@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proposed Her</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div
+        class="tenor-gif-embed"
+        data-postid="22885016"
+        data-share-method="host"
+        data-aspect-ratio="1.04918"
+        data-width="100%"
+      >
+        <a href="https://tenor.com/view/manja-gif-22885016">Manja Sticker</a
+        >from
+        <a href="https://tenor.com/search/manja-stickers">Manja Stickers</a>
+      </div>
+
+      <script
+        type="text/javascript"
+        async
+        src="https://tenor.com/embed.js"
+      ></script>
+      <h1 id="type-h1" data-text="Please Baala, Sobt jau na 🤗"></h1>
+      <h2>Balaa, will you agree to travel together on 2nd of April,please?</h2>
+      <h2>Rahul is yours</h2>
+      <div
+        id="countdown"
+        style="font-size: 24px; color: #fff; margin: 10px 0"
+      ></div>
+
+      <div class="btn">
+        <a href="yes.html">Yes</a>
+        <a href="no1.html">No</a>
+        <button onclick="document.getElementById('bg-music').play()">
+          Play Our Song 🎵
+        </button>
+      </div>
+      <div style="margin-top: 20px">
+        <a href="reasons.html" style="color: #fff; text-decoration: underline"
+          >Why April 2nd is perfect for us?</a
+        >
+      </div>
+    </div>
+    <audio
+      id="bg-music"
+      src="https://www.soundjay.com/misc/sounds/romantic-piano-01.mp3"
+      preload="auto"
+    ></audio>
+    <script>
+      // Countdown to April 2, 2026
+      const targetDate = new Date("2026-04-02T00:00:00");
+      function updateCountdown() {
+        const now = new Date();
+        const diff = targetDate - now;
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+        );
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+        document.getElementById("countdown").innerText =
+          `Only ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds until our adventure! ⏳`;
+      }
+      setInterval(updateCountdown, 1000);
+      updateCountdown();
+      // Surprise modal
+      setTimeout(
+        () =>
+          showModal("Surprise! I love you more than anything in the world 💕"),
+        5000,
+      );
+    </script>
+    <script src="./script.js"></script>
+  </body>
+</html>

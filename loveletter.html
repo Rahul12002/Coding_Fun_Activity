@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Love Letter</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 id="type-h1" data-text="My Dearest Baala"></h1>
+      <p
+        id="letter"
+        style="text-align: left; max-width: 400px; line-height: 1.6"
+      ></p>
+      <div class="btn">
+        <a href="yes.html">Back</a>
+      </div>
+    </div>
+    <script>
+      const letterText = `From the moment I met you, my world changed. Your smile lights up my days, and your laughter is my favorite song. I promise to always cherish you, support you, and love you with all my heart. Traveling together on April 2nd is just the beginning of our beautiful journey. I love you endlessly! 💕`;
+      const letterEl = document.getElementById("letter");
+      let i = 0;
+      function typeLetter() {
+        if (i < letterText.length) {
+          letterEl.innerHTML += letterText.charAt(i);
+          i++;
+          setTimeout(typeLetter, 50);
+        }
+      }
+      typeLetter();
+    </script>
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Why April 2nd?</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 id="type-h1" data-text="Why April 2nd is Perfect for Our Trip"></h1>
+      <ul style="text-align: left; max-width: 400px">
+        <li>🌟 Better weather - warmer and more pleasant</li>
+        <li>💼 Less work stress, more relaxation</li>
+        <li>🎊 April has fun festivals and events</li>
+        <li>🍃 Nature is blooming, perfect for photos</li>
+        <li>❤️ More time to plan and make it special</li>
+        <li>🚀 New beginnings in April, like our love</li>
+      </ul>
+      <p>Trust me, Baala, it'll be magical! 💕</p>
+      <div
+        id="compliment"
+        style="font-style: italic; margin: 20px 0; color: #d9a6a6"
+      ></div>
+      <div class="btn">
+        <a href="index.html">Back</a>
+      </div>
+    </div>
+    <script>
+      const compliments = [
+        "You are the most beautiful person I know! 😍",
+        "Your smile makes my heart skip a beat! 💓",
+        "I love how kind and caring you are! 🥰",
+        "You make every moment special! ✨",
+        "I can't imagine my life without you! 💑",
+      ];
+      let compIndex = 0;
+      const compEl = document.getElementById("compliment");
+      function showCompliment() {
+        compEl.innerText = compliments[compIndex];
+        compIndex = (compIndex + 1) % compliments.length;
+      }
+      setInterval(showCompliment, 3000);
+      showCompliment();
+    </script>
+    <script src="./script.js"></script>
+  </body>
+</html>
